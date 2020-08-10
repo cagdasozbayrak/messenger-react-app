@@ -1,0 +1,17 @@
+.sent-message {
+    background: lightgreen;
+}
+
+.received-message {
+    background: lightblue;
+}
+
+.received-message, .sent-message {
+    width: fit-content !important;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sent-message-container {
+    justify-content: flex-end !important;
+}

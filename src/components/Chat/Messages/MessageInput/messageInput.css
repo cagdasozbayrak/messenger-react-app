@@ -1,0 +1,13 @@
+.message-input {
+    background: lightgrey;
+    margin-bottom: 5px !important;
+    display: flex;
+    align-items: center;
+}
+
+.message-bar {
+    width: 95%;
+    background: white;
+    margin: 5px !important;
+    border-radius: 10px;
+}

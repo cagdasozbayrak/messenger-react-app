@@ -1,0 +1,45 @@
+{
+  "cagdas": {
+    "george": [
+      {
+        "text": "Lorem ipsum",
+        "timeStamp": 1597046771
+      },
+      {
+        "text": "test message",
+        "timeStamp": 1596960425
+      },
+      {
+        "text": "asdsad",
+        "timeStamp": 1596442187
+      },
+      {
+        "text": "123",
+        "timeStamp": 1596442185
+      }
+    ],
+    "henry": [],
+    "defaultuser": [
+      {
+        "text": "default messages",
+        "timeStamp": 1596442185
+      }
+    ]
+  },
+  "george": {
+    "cagdas": [
+      {
+        "text": "message to cagdas",
+        "timeStamp": 1597046771
+      },
+      {
+        "text": "textt",
+        "timeStamp": 1597046671
+      },
+      {
+        "text": "test",
+        "timeStamp": 1597046779
+      }
+    ]
+  }
+}

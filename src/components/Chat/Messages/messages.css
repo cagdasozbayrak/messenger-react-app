@@ -1,0 +1,11 @@
+.messages-container {
+    flex: 4;
+    align-self: flex-end;
+    height: 100%;
+}
+
+.messages {
+    height: inherit;
+    max-height: calc(100% - 90px);
+    overflow: auto;
+}
