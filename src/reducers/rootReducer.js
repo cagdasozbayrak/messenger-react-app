@@ -30,7 +30,7 @@ export default function (state = initialState, action) {
     case actionTypes.SELECT_FRIEND:
       return { ...state, selectedFriend: action.payload };
     case actionTypes.SEND_MESSAGE:
-      const message = action.payload ;
+      const message = action.payload;
       return { ...state, messages: [...state.messages, message] };
     default:
       return state;
@@ -60,7 +60,7 @@ export const retrieveMessages = (username, friend) => (dispatch) => {
     return { ...message, sentBy: friend };
   });
   const messages = [...sentMessages, ...receivedMessages].sort(
-      (m1, m2) => m1.timeStamp - m2.timeStamp
+    (m1, m2) => m1.timeStamp - m2.timeStamp
   );
   return dispatch({
     type: actionTypes.RETRIEVE_MESSAGES,
