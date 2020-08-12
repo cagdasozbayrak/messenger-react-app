@@ -1,45 +1,74 @@
-{
-  "cagdas": {
-    "george": [
-      {
-        "text": "Lorem ipsum",
-        "timeStamp": 1597046771
-      },
-      {
-        "text": "test message",
-        "timeStamp": 1596960425
-      },
-      {
-        "text": "asdsad",
-        "timeStamp": 1596442187
-      },
-      {
-        "text": "123",
-        "timeStamp": 1596442185
-      }
-    ],
-    "henry": [],
-    "defaultuser": [
-      {
-        "text": "default messages",
-        "timeStamp": 1596442185
-      }
-    ]
+[
+  {
+    "text": "Lorem ipsum",
+    "timeStamp": 1597046771,
+    "sentTo": "george",
+    "sentBy": "cagdas"
   },
-  "george": {
-    "cagdas": [
-      {
-        "text": "message to cagdas",
-        "timeStamp": 1597046771
-      },
-      {
-        "text": "textt",
-        "timeStamp": 1597046671
-      },
-      {
-        "text": "test",
-        "timeStamp": 1597046779
-      }
-    ]
+  {
+    "text": "test message",
+    "timeStamp": 1596960425,
+    "sentTo": "george",
+    "sentBy": "cagdas"
+  },
+  {
+    "text": "asdsad",
+    "timeStamp": 1596442187,
+    "sentTo": "george",
+    "sentBy": "cagdas"
+  },
+  {
+    "text": "123",
+    "timeStamp": 1596442185,
+    "sentTo": "george",
+    "sentBy": "cagdas"
+  },
+  {
+    "text": "default messages",
+    "timeStamp": 1596442185,
+    "sentTo": "henry",
+    "sentBy": "defaultuser"
+  },
+  {
+    "text": "default messages",
+    "timeStamp": 1596442185,
+    "sentTo": "groupname",
+    "sentBy": "defaultuser"
+  },
+  {
+    "text": "message to cagdas",
+    "timeStamp": 1597046771,
+    "sentTo": "cagdas",
+    "sentBy": "george"
+  },
+  {
+    "text": "textt",
+    "timeStamp": 1597046671,
+    "sentTo": "cagdas",
+    "sentBy": "george"
+  },
+  {
+    "text": "test",
+    "timeStamp": 1597046779,
+    "sentTo": "cagdas",
+    "sentBy": "george"
+  },
+  {
+    "text": "message to cagdas",
+    "timeStamp": 1597046771,
+    "sentTo": "groupname",
+    "sentBy": "george"
+  },
+  {
+    "text": "textt",
+    "timeStamp": 1597046671,
+    "sentTo": "groupname",
+    "sentBy": "cagdas"
+  },
+  {
+    "text": "test",
+    "timeStamp": 1597046779,
+    "sentTo": "groupname",
+    "sentBy": "george"
   }
-}
+]

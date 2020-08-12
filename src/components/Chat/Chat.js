@@ -43,8 +43,10 @@ const Chat = ({
   }, [username]);
 
   useEffect(() => {
-    retrieveMessages(username, friends[selectedFriend]);
+    const friend = friends[selectedFriend];
+    retrieveMessages(username, friend, friend ? friend.toLowerCase().startsWith("group") : "");
   }, [friends, selectedFriend]);
+  const getFriend = () => friends[selectedFriend];
 
   return (
     <div className="chat-container">
@@ -54,9 +56,10 @@ const Chat = ({
         selectedFriend={selectedFriend}
       />
       <div className="messages-container">
-        <Messages messages={messages} friend={friends[selectedFriend]} />
+        <Messages messages={messages} username={username} />
         <MessageInput
-          onMessageSent={(message) => sendMessage(message, username)}
+          onMessageSent={(message) => sendMessage(message, username, getFriend())}
+          friend={getFriend()}
         />
       </div>
     </div>

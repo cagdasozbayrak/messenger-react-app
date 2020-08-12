@@ -3,14 +3,14 @@ import { List } from "@material-ui/core";
 import Message from "./Message/Message";
 import "./messages.css";
 
-const Messages = ({ messages, friend }) => {
+const Messages = ({ messages, username }) => {
   return (
     <List className="messages">
       {messages.map((message, index) => (
         <Message
           key={`message-${index}`}
           message={message}
-          isReceived={message.sentBy === friend}
+          isSent={message.sentBy === username}
         />
       ))}
     </List>

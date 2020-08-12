@@ -44,24 +44,17 @@ export const retrieveFriends = (username) => (dispatch) => {
     payload: Friends[username],
   });
 };
-export const retrieveMessages = (username, friend) => (dispatch) => {
+export const retrieveMessages = (username, friend, isGroup) => (dispatch) => {
   if (!username || !friend) {
     return;
   }
-  const usersMessages = MessageData[username];
-  const friendsMessages = MessageData[friend];
-  let sentMessages = usersMessages ? usersMessages[friend] || [] : [];
-  let receivedMessages = friendsMessages ? friendsMessages[username] || [] : [];
 
-  sentMessages = sentMessages.map((message) => {
-    return { ...message, sentBy: username };
-  });
-  receivedMessages = receivedMessages.map((message) => {
-    return { ...message, sentBy: friend };
-  });
-  const messages = [...sentMessages, ...receivedMessages].sort(
-    (m1, m2) => m1.timeStamp - m2.timeStamp
-  );
+  const messages = MessageData.filter((message) =>
+    isGroup
+      ? message.sentTo === friend
+      : (message.sentBy === friend || message.sentBy === username) &&
+        (message.sentTo === username || message.sentTo === friend)
+  ).sort((m1, m2) => m1.timeStamp - m2.timeStamp);
   return dispatch({
     type: actionTypes.RETRIEVE_MESSAGES,
     payload: messages,
@@ -69,9 +62,14 @@ export const retrieveMessages = (username, friend) => (dispatch) => {
 };
 
 export const selectFriend = createAction(actionTypes.SELECT_FRIEND);
-export const sendMessage = (message, user) => (dispatch) => {
+export const sendMessage = (message, user, friend) => (dispatch) => {
   return dispatch({
     type: actionTypes.SEND_MESSAGE,
-    payload: { text: message, timestamp: new Date().getTime(), sentBy: user },
+    payload: {
+      text: message,
+      timestamp: new Date().getTime(),
+      sentBy: user,
+      sentTo: friend,
+    },
   });
 };
